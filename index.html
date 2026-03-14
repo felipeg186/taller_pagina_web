@@ -10,9 +10,7 @@
 
 </head>
 <body>
-
     <div class="portada">
-      
       <h1 class="portada-titulo">
         Los más<br>
         <span>vendidos</span>
@@ -39,9 +37,105 @@
     </div>
 
     <nav class="section-nav">
-    <button class="tab-btn active" onclick="showSection('autos', this)">🚗 Automóviles</button>
-    <button class="tab-btn"       onclick="showSection('motos', this)">🏍️ Motos</button>
+      <button class="tab-btn active" onclick="showSection('autos', this)">🚗 Automóviles</button>
+      <button class="tab-btn"       onclick="showSection('motos', this)">🏍️ Motos</button>
     </nav>
+
+    <section id ="autos" class="catalogo_selecion_visible"> 
+      <div class="selecion_heading">
+        <div>
+          <h2>top <em>Autos</em></h2>
+        </div>
+        <samp class="section-count">top 10 Colombia 2025</samp>
+      </div>
+      <div class="cards-grid">
+        
+        <!--1. Kia Picanto -->
+        <div class="card">
+          <div class="rank gold">1</div>
+          <div  class="card-img"> 
+            <img src="img/Kia_Picanto.jpg" alt="Kia Picanto">
+            <span class="card-cat">Sedán / Hatchback</span>
+          </div>
+
+          <div class="card-body">
+            <div class="marca">Kia</div>
+            <div class="nombre">Picanto</div>
+            <p class="desc">Hatchback compacto y ágil perfecto para la ciudad, con diseño moderno, bajo consumo de combustible y espacio interior optimizado para 4 pasajeros cómodos.</p>
+            <div class="specs">
+              <div><span class="spec-label">Motor</span><span class="spec-val"> 1.0L o 1.2L de 3 cilindros (66-84 hp)</span></div>
+              <div><span class="spec-label">Precio aprox.</span><span class="spec-val">Desde $70 millones COP</span></div>
+              <div><span class="spec-label">Unidades</span><span class="spec-val">1.215</span></div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a class="btn" href="https://distrikia.com.co/vehiculos-kia/automoviles/new-picanto/" target="_blank" rel="noopener">
+            Ver en Kia Colombia
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!--2. Toyota Corolla Cross -->
+        <div class="card">
+          <div class="rank gold">2</div>
+          <div  class="card-img"> 
+            <img src="img/toyota-corolla-cross.webp" alt="toyota corolla cross">
+            <span class="card-cat">SUV Compacto </span>
+          </div>
+
+          <div class="card-body">
+            <div class="marca">Toyota </div>
+            <div class="nombre">Corolla Cross</div>
+            <p class="desc">SUV compacto confiable y versátil para familias urbanas, con gran seguridad Toyota, maletero amplio y opciones híbridas que ahorran combustible en trayectos diarios</p>
+            <div class="specs">
+              <div><span class="spec-label">Motor</span><span class="spec-val">2.0L gasolina (167 hp) o híbrido 1.8L (122 hp combinado)</span></div>
+              <div><span class="spec-label">Precio aprox.</span><span class="spec-val">Desde $120 millones COP</span></div>
+              <div><span class="spec-label">Unidades</span><span class="spec-val">989</span></div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a class="btn" href="https://www.toyota.com.co/" target="_blank" rel="noopener">
+            Ver en Toyota Colombia
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!--3. Renault Duster -->
+        <div class="card">
+          <div class="rank gold">3</div>
+          <div  class="card-img"> 
+            <img src="img/renault_duster.webp" alt="Renault Duster">
+            <span class="card-cat">SUV Compacto </span>
+          </div>
+
+          <div class="card-body">
+            <div class="marca">Renault</div>
+            <div class="nombre">Duster</div>
+            <p class="desc">SUV robusto y aventurero ideal para caminos variados y off-road ligero, con capacidad de carga generosa, tracción eficiente y tecnología híbrida mild para mayor economía</p>
+            <div class="specs">
+              <div><span class="spec-label">Motor</span><span class="spec-val">1.2L turbo mild-hybrid (129 hp, 230 Nm)</span></div>
+              <div><span class="spec-label">Precio aprox.</span><span class="spec-val">Desde $126 millones COP</span></div>
+              <div><span class="spec-label">Unidades</span><span class="spec-val">656</span></div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a class="btn" href="https://www.renault.com.co/" target="_blank" rel="noopener">
+            Ver en Renault Colombia
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+
+
+      </div> 
+    </section>
+    
     
 </body>
 </html>
