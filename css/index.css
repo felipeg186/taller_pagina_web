@@ -1,0 +1,199 @@
+
+:root {
+  --rojo:      #E8192C;
+  --rojo-osc:  #b5101e;
+  --negro:     #0D0D0D;
+  --gris-osc:  #1A1A1A;
+  --gris-med:  #2C2C2C;
+  --blanco:    #FFFFFF;
+  --texto-sec: #A0A0A0;
+  --radio:     12px;
+  --trans:     all 0.3s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--negro);
+  color: var(--blanco);
+  overflow-x: hidden;
+}
+
+img { display: block; width: 100%; }
+a  { text-decoration: none; color: inherit; }
+
+
+.portada {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,25,44,0.15) 0%, transparent 70%),
+    var(--negro);
+  position: relative;
+}
+
+.portada::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #FFD100 33.3%, #003893 33.3% 66.6%, #CE1126 66.6%);
+}
+
+.portada-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+}
+
+.portada-titulo span {
+  color: var(--rojo);
+  display: block;
+}
+
+.portada-descripcion {
+  margin-top: 1.4rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 300;
+  color: var(--texto-sec);
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+.portada-datos {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dato { text-align: center; }
+
+.dato-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  color: #FFD100;
+  line-height: 1;
+}
+
+.dato-lbl {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-sec);
+  margin-top: 0.3rem;
+}
+
+
+.tab-radio { display: none; }
+
+nav.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13,13,13,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+}
+
+.tab-label {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--texto-sec);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--trans);
+  user-select: none;
+}
+
+.tab-label:hover {
+  background: rgba(232,25,44,0.18);
+  border-color: rgba(232,25,44,0.45);
+  color: var(--blanco);
+}
+
+
+#tab-autos:checked ~ nav.section-nav .label-autos,
+#tab-motos:checked ~ nav.section-nav .label-motos {
+  background: var(--rojo);
+  border-color: var(--rojo);
+  color: var(--blanco);
+}
+
+#autos,
+#motos,
+.catalogo_selecion_visible,
+.seccion {
+  display: none;
+  padding: 4rem 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+#tab-autos:checked ~ #autos { display: block; }
+#tab-motos:checked ~ #motos { display: block; }
+
+
+.selecion_heading {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.selecion_heading h2,
+#motos h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+}
+
+.selecion_heading h2 em,
+#motos h2 em {
+  color: var(--rojo);
+  font-style: normal;
+}
+
+.section-count {
+  background: var(--gris-med);
+  color: var(--texto-sec);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 0.4rem;
+  font-style: normal;
+  display: inline-block;
+}
+
+
+.cards-grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.6rem;
+}
+
+/* colocar cartas de los automoviles */
