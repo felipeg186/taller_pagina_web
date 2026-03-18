@@ -196,4 +196,213 @@ nav.section-nav {
   gap: 1.6rem;
 }
 
-/* colocar cartas de los automoviles */
+/* colocar cartas de los autos y motos */
+
+#motos h2 {
+  margin-bottom: 2.5rem;
+}
+
+
+.card {
+  background: var(--gris-osc);
+  border-radius: var(--radio);
+  border: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--trans);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(232,25,44,0.4);
+  box-shadow: 0 12px 40px rgba(232,25,44,0.22);
+}
+
+/* Badge de ranking */
+.rank {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 2;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background: var(--rojo);
+  color: var(--blanco);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(232,25,44,0.55);
+}
+
+.rank.gold   { background: #C9920F; box-shadow: 0 2px 10px rgba(201,146,15,0.5); }
+.rank.silver { background: #6E6E6E; }
+.rank.bronze { background: #7B4F2E; }
+
+
+.card-img {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--gris-med);
+  position: relative;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img img { transform: scale(1.07); }
+
+.card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,13,13,0.82) 0%, transparent 52%);
+}
+
+/*categoría */
+.card-cat {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 0.7rem;
+  z-index: 1;
+  background: rgba(0,0,0,0.68);
+  backdrop-filter: blur(5px);
+  color: var(--texto-sec);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Cuerpo */
+.card-body {
+  padding: 1.2rem 1.2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.marca {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rojo);
+  margin-bottom: 0.2rem;
+}
+
+.nombre {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+.desc {
+  font-size: 0.84rem;
+  font-weight: 300;
+  color: var(--texto-sec);
+  line-height: 1.65;
+  flex: 1;
+}
+
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.spec-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto-sec);
+  margin-right: 0.35rem;
+}
+
+.spec-val {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blanco);
+}
+
+
+.card-footer { padding: 1.1rem 1.2rem 1.2rem; }
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.82rem 1.2rem;
+  background: var(--rojo);
+  color: var(--blanco);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: var(--trans);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--rojo-osc);
+  box-shadow: 0 4px 20px rgba(232,25,44,0.45);
+}
+
+.btn svg { transition: transform 0.2s ease; flex-shrink: 0; }
+.btn:hover svg { transform: translateX(4px); }
+
+
+footer {
+  background: var(--gris-osc);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  color: var(--texto-sec);
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+footer strong { color: var(--blanco); }
+
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: var(--rojo);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .portada-datos { gap: 2rem; }
+}
+
+@media (max-width: 600px) {
+  .cards-grid,
+  .grid        { grid-template-columns: 1fr; }
+  .portada-datos { gap: 1.5rem; }
+  .dato-num    { font-size: 2rem; }
+}
