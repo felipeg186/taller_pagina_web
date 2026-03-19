@@ -220,7 +220,7 @@ nav.section-nav {
   box-shadow: 0 12px 40px rgba(232,25,44,0.22);
 }
 
-/* Badge de ranking */
+
 .rank {
   position: absolute;
   top: 0.9rem;
@@ -267,7 +267,7 @@ nav.section-nav {
   background: linear-gradient(to top, rgba(13,13,13,0.82) 0%, transparent 52%);
 }
 
-/*categoría */
+
 .card-cat {
   position: absolute;
   bottom: 0.7rem;
@@ -285,7 +285,7 @@ nav.section-nav {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Cuerpo */
+
 .card-body {
   padding: 1.2rem 1.2rem 0;
   flex: 1;
